@@ -7,13 +7,34 @@ export const StyledButton = styled.button`
   text-align: center;
   background-color: var(--accent);
   color: var(--bg);
-  font-weight:${theme.fontWeights.medium};;
+  line-height: 1.6;
+  font-size: ${theme.fontSizes.m};
+  font-weight: ${theme.fontWeights.medium};
   border-radius: ${theme.radii.medium};
+  box-shadow: var(--shadow);
   transition:
     background-color ${theme.transition},
+    box-shadow ${theme.transition};
 
   &:hover,
   &:focus-visible {
     background-color: var(--text);
+    box-shadow: var(--shadow-hover);
+  }
+`;
+
+export const StyledGhostButton = styled(StyledButton)`
+  background-color: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition:
+    border ${theme.transition},
+    color ${theme.transition},
+    box-shadow ${theme.transition};
+
+  &:hover,
+  &:focus-visible {
+    background-color: white;
+    border: 1px solid var(--muted-bg);
   }
 `;

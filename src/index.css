@@ -1,16 +1,21 @@
 :root {
   --text: #222a25;
   --text-light: #404f43;
-  --muted-text: #79867d;
+  --text-muted: #79867d;
+  --text-faint: rgba(255, 255, 255, 0.7);
+  --text-ghost: rgba(255, 255, 255, 0.5);
   --bg: #fbfaf9;
   --bg-secondary: rgba(240, 242, 237, 0.5);
+  --light-overlay: rgba(255, 255, 255, 0.1);
   --border: #e8e6e3;
   --hover-border: #aaa9a8;
   --accent: #e55d3e;
   --accent-bg: rgba(229, 93, 62, 0.1);
   --muted-bg: rgba(64, 79, 67, 0.1);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow: rgba(64, 79, 67, 0.05) 0 1px 2px 0;
+  --shadow-hover:
+    rgba(64, 79, 67, 0.1) 0 10px 15px -3px,
+    rgba(64, 79, 67, 0.05) 0 4px 6px -2px;
 
   --font-main: system-ui, "Segoe UI", Roboto, sans-serif;
   --font-heading: system-ui, "Segoe UI", Roboto, sans-serif;
@@ -36,7 +41,7 @@
     --text-h: #f3f4f6;
     --bg: #16171d;
     --border: #2e303a;
-    --code-bg: #1f2028;
+    /* --code-bg: #1f2028; */
     --accent: #c084fc;
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
@@ -161,13 +166,13 @@ ol {
   margin: 0;
 }
 
-/* section {
+section {
   padding-block: 40px;
 
-  @media screen and (min-width: ${theme.breakpoints.md}) {
+  @media screen and (min-width: 768px) {
     padding-block: 60px;
   }
-} */
+}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

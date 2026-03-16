@@ -34,9 +34,10 @@ export const Header: React.FC = () => {
               display: "flex",
               alignItems: "center",
               gap: "8px",
+              fontSize: "14px",
             }}
           >
-            <FiDownload size={16} />
+            <FiDownload size={14} />
             Завантажити
           </StyledButton>
         </div>

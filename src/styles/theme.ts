@@ -5,11 +5,14 @@ export const theme = {
     s: "14px",
     m: "18px",
     l: "24px",
-    xl: "64px",
+    xl: "30px",
+    xxl: "48px",
+    xxxl: "60px",
   },
   fontWeights: {
     normal: 400,
     medium: 500,
+    semibold: 600,
     bold: 700,
   },
   lineHeights: {
@@ -25,6 +28,7 @@ export const theme = {
     normal: "12px",
     medium: "16px",
     large: "24px",
+    pill: "9999px",
     round: "50%",
   },
   transition: "200ms ease-in-out",

@@ -1,15 +1,23 @@
 import React from "react";
-// import HeroSection from "@/components/HeroSection";
-// import EventsSection from "@/components/EventsSection";
-// import CTASection from "@/components/CTASection";
+import {
+  HeroSection,
+  HowItWorksSection,
+  TestimonialsSection,
+  CTASection,
+} from "@/components";
+// import {EventsSection} from "@/components/EventsSection";
+// import { TestimonialsSection } from "@/components";
+// import { CTASection } from "@/components";
 
 const Home: React.FunctionComponent = () => {
   return (
     <>
-      <p>Home pageeeeeee</p>
-      {/* <HeroSection />
-      <EventsSection />
-      <CTASection /> */}
+      <HeroSection />
+      {/* <EventsSection /> */}
+
+      <HowItWorksSection />
+      <TestimonialsSection />
+      <CTASection />
     </>
   );
 };
