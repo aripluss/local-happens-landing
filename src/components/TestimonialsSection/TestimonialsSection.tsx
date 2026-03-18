@@ -1,14 +1,7 @@
-import React from "react";
-<<<<<<< HEAD
-import { StyledTestimonialsContainer } from "./TestimonialsSection.styled";
-import { GiRoundStar } from "react-icons/gi";
-
-=======
 import { GiRoundStar } from "react-icons/gi";
 
 import { StyledTestimonialsContainer } from "./TestimonialsSection.styled";
 
->>>>>>> 459ca6d (DEV-19 add preview sections, fix styles)
 interface TestimonialItem {
   rating: number;
   text: string;
@@ -47,14 +40,10 @@ export const TestimonialsSection: React.FC = () => {
   return (
     <section id="testimonials" className="testimonials">
       <StyledTestimonialsContainer>
-<<<<<<< HEAD
-        <h2 className="title">Відгуки наших користувачів</h2>
-=======
         <h2 className="title">
           Відгуки від реальних користувачів,
           <br /> які вже інтегрували LocalHappens у своє життя
         </h2>
->>>>>>> 459ca6d (DEV-19 add preview sections, fix styles)
 
         <div className="cards">
           {testimonialData.map((item, index) => (
@@ -67,11 +56,7 @@ export const TestimonialsSection: React.FC = () => {
                     </span>
                   ))}
                 </div>
-<<<<<<< HEAD
-                <p className="text">"{item.text}"</p>
-=======
                 <p className="text">“{item.text}”</p>
->>>>>>> 459ca6d (DEV-19 add preview sections, fix styles)
               </div>
               <div className="author">
                 <p className="author-name">{item.author}</p>

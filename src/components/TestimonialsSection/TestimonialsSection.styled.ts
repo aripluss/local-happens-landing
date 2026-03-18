@@ -32,11 +32,7 @@ export const StyledTestimonialsContainer = styled(StyledContainer)`
     flex-direction: column;
     justify-content: space-between;
     gap: 16px;
-<<<<<<< HEAD
-    background-color: var(--bg);
-=======
     background-color: white;
->>>>>>> 459ca6d (DEV-19 add preview sections, fix styles)
     padding: 24px 16px;
     border-radius: ${theme.radii.normal};
     box-shadow: var(--shadow);
@@ -52,10 +48,6 @@ export const StyledTestimonialsContainer = styled(StyledContainer)`
   .text {
     color: var(--text-light);
     font-style: italic;
-<<<<<<< HEAD
-    /* font-size: ${theme.fontSizes.m}; */
-=======
->>>>>>> 459ca6d (DEV-19 add preview sections, fix styles)
   }
 
   .author {

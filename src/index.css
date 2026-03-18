@@ -28,6 +28,8 @@
   --font-main: "Poppins", system-ui, sans-serif;
   --font-heading: "Cormorant Unicase", system-ui, serif;
 
+  --header-height-for-scroll: 64px;
+
   font-family: var(--font-main);
   font-size: 14px;
   line-height: 1.45;
@@ -168,6 +170,7 @@ ol {
 }
 
 section {
+  scroll-margin-top: var(--header-height-for-scroll);
   padding-block: 40px;
 
   @media screen and (min-width: 768px) {
