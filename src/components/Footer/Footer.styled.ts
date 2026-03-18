@@ -3,7 +3,7 @@ import { StyledContainer } from "@/components/ui/Container/Container.styled";
 import { theme } from "@/styles/theme";
 
 export const StyledFooter = styled.footer`
-  background-color: #f5f5f5;
+  background-color: var(--bg);
   padding-block: 40px;
 
   & .logo {

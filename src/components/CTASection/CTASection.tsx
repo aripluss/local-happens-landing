@@ -1,18 +1,11 @@
-import { StyledButton } from "@/components/ui/Button/Button.styled";
-import { StyledCTASection, StyledCTAContainer } from "./CTASection.styled";
-
 import { LuSparkles } from "react-icons/lu";
 import { FiDownload } from "react-icons/fi";
-import {
-  HiOutlineDevicePhoneMobile,
-  HiMiniDevicePhoneMobile,
-} from "react-icons/hi2";
-import { SlScreenSmartphone } from "react-icons/sl";
-import { BsLightning, BsLightningCharge } from "react-icons/bs";
-import { RxLightningBolt } from "react-icons/rx";
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { PiLightningBold } from "react-icons/pi";
-
 import { BsHandThumbsUp } from "react-icons/bs";
+
+import { StyledButton } from "@/components/ui/Button/Button.styled";
+import { StyledCTASection, StyledCTAContainer } from "./CTASection.styled";
 
 export const CTASection: React.FC = () => {
   return (
@@ -26,7 +19,6 @@ export const CTASection: React.FC = () => {
 
           <div className="content-text">
             <h1 className="title">Готові відкрити найкращі події навколо?</h1>
-
             <p className="text">
               Завантажте LocalHappens прямо зараз та почніть відкривати локальні
               події, створювати свої та зустрічати нових людей.
@@ -36,9 +28,6 @@ export const CTASection: React.FC = () => {
 
         <StyledButton
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
             alignSelf: "center",
           }}
         >
@@ -48,15 +37,11 @@ export const CTASection: React.FC = () => {
 
         <div className="features">
           <div className="feature">
-            {/* <HiMiniDevicePhoneMobile /> */}
             <HiOutlineDevicePhoneMobile />
             <span>iOS та Android</span>
           </div>
 
           <div className="feature">
-            {/* <BsLightning />
-              <BsLightningCharge />
-              <RxLightningBolt /> */}
             <PiLightningBold />
             <span>Швидка авторизація</span>
           </div>

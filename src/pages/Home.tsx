@@ -1,6 +1,7 @@
 import React from "react";
 import {
   HeroSection,
+  PreviewSection,
   HowItWorksSection,
   TestimonialsSection,
   CTASection,
@@ -13,8 +14,7 @@ const Home: React.FunctionComponent = () => {
   return (
     <>
       <HeroSection />
-      {/* <EventsSection /> */}
-
+      <PreviewSection />
       <HowItWorksSection />
       <TestimonialsSection />
       <CTASection />

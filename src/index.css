@@ -1,24 +1,32 @@
+@import "./styles/fonts.css";
+
 :root {
   --text: #222a25;
   --text-light: #404f43;
   --text-muted: #79867d;
   --text-faint: rgba(255, 255, 255, 0.7);
   --text-ghost: rgba(255, 255, 255, 0.5);
+  --text-accent-muted: rgba(229, 93, 62, 0.2);
+
   --bg: #fbfaf9;
   --bg-secondary: rgba(240, 242, 237, 0.5);
   --light-overlay: rgba(255, 255, 255, 0.1);
-  --border: #e8e6e3;
-  --hover-border: #aaa9a8;
-  --accent: #e55d3e;
+  --bg-white-faint: rgba(255, 255, 255, 0.9);
   --accent-bg: rgba(229, 93, 62, 0.1);
   --muted-bg: rgba(64, 79, 67, 0.1);
+
+  --border: #e8e6e3;
+  --border-faint: rgba(229, 93, 62, 0.2);
+  --hover-border: #aaa9a8;
+  --accent: #e55d3e;
+
   --shadow: rgba(64, 79, 67, 0.05) 0 1px 2px 0;
   --shadow-hover:
     rgba(64, 79, 67, 0.1) 0 10px 15px -3px,
     rgba(64, 79, 67, 0.05) 0 4px 6px -2px;
 
-  --font-main: system-ui, "Segoe UI", Roboto, sans-serif;
-  --font-heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-main: "Poppins", system-ui, sans-serif;
+  --font-heading: "Cormorant Unicase", system-ui, serif;
 
   font-family: var(--font-main);
   font-size: 14px;
@@ -29,39 +37,42 @@
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* @media (max-width: 1024px) {
-    font-size: 16px;
-  } */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
-    --text-h: #f3f4f6;
+    --text-light: #f3f4f6;
+    --text-muted: #79867d;
+    --text-faint: rgba(255, 255, 255, 0.7);
+    --text-ghost: rgba(255, 255, 255, 0.5);
+    --text-accent-muted: rgba(229, 93, 62, 0.2);
+
     --bg: #16171d;
+    --bg-secondary: rgba(240, 242, 237, 0.5);
+    --light-overlay: rgba(255, 255, 255, 0.1);
+    --bg-white-faint: rgba(255, 255, 255, 0.9);
+    --accent-bg: rgba(229, 93, 62, 0.1);
+    --muted-bg: rgba(64, 79, 67, 0.1);
+
     --border: #2e303a;
-    /* --code-bg: #1f2028; */
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --border-faint: rgba(229, 93, 62, 0.2);
+    --hover-border: #aaa9a8;
+    --accent: #e55d3e;
+
+    --shadow: rgba(64, 79, 67, 0.05) 0 1px 2px 0;
+    --shadow-hover:
+      rgba(64, 79, 67, 0.1) 0 10px 15px -3px,
+      rgba(64, 79, 67, 0.05) 0 4px 6px -2px;
   }
 }
 
 #root {
-  /* width: 1126px; */
-  /* max-width: 100%; */
   padding: 0;
   margin: 0 auto;
-  /* text-align: center; */
-  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  /* box-sizing: border-box; */
 }
 
 *,
@@ -87,30 +98,6 @@ main {
 }
 
 h1,
-h2 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--text);
-}
-
-h1 {
-  font-size: 48px;
-  line-height: 1;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-
-h2 {
-  font-size: 30px;
-  line-height: 1.2;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-
-h1,
 h2,
 h3,
 h4,
@@ -118,6 +105,40 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1;
+}
+
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 14px;
 }
 
 button {
@@ -131,12 +152,6 @@ button {
 
 a {
   text-decoration: none;
-  /* color: ${props => props.theme.colors.accentPrimary};
-  transition: color ${props => props.theme.transition}; */
-}
-a:hover,
-a:focus-visible {
-  /* color: ${props => props.theme.colors.accentSecondary}; */
 }
 
 img {
@@ -144,20 +159,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-} */
 
 ul,
 ol {
@@ -179,7 +180,7 @@ section {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--text);

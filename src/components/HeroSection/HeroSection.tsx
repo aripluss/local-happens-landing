@@ -1,11 +1,12 @@
+import { FiDownload } from "react-icons/fi";
+import { CiLocationOn } from "react-icons/ci";
+
 import {
   StyledButton,
   StyledGhostButton,
 } from "@/components/ui/Button/Button.styled";
 import { StyledHeroContainer } from "./HeroSection.styled";
 import hero from "@/assets/hero.webp";
-import { FiDownload } from "react-icons/fi";
-import { CiLocationOn } from "react-icons/ci";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -32,13 +33,7 @@ export const HeroSection: React.FC = () => {
             </p>
           </div>
           <div className="hero-buttons">
-            <StyledButton
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
+            <StyledButton>
               <FiDownload size={16} />
               Завантажити додаток
             </StyledButton>

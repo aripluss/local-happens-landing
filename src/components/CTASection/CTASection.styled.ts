@@ -4,7 +4,9 @@ import { theme } from "@/styles/theme";
 
 export const StyledCTASection = styled.section`
   background-color: gray;
-  padding-block: 110px;
+  @media screen and (min-width: ${theme.breakpoints.lg}) {
+    padding-block: 120px;
+  }
 `;
 
 export const StyledCTAContainer = styled(StyledContainer)`
@@ -44,7 +46,9 @@ export const StyledCTAContainer = styled(StyledContainer)`
 
   & .features {
     display: flex;
-    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 32px;
     color: var(--text-ghost);
   }
 

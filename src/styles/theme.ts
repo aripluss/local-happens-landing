@@ -1,5 +1,4 @@
 export const theme = {
-  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fontSizes: {
     xs: "12px",
     s: "14px",
