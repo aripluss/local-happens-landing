@@ -1,5 +1,6 @@
 export { Header } from "./Header/Header";
 export { Footer } from "./Footer/Footer";
+export { BurgerMenuModal } from "./BurgerMenu/BurgerMenuModal";
 export { HeroSection } from "./HeroSection/HeroSection";
 export { PreviewSection } from "./PreviewSection/PreviewSection";
 export { HowItWorksSection } from "./HowItWorksSection/HowItWorksSection";

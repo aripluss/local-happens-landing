@@ -11,6 +11,7 @@ export const StyledHeader = styled.header`
   padding-block: 8px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
 
   & .logo {
     align-items: center;
@@ -52,7 +53,11 @@ export const StyledHeader = styled.header`
     }
   }
 
-  & .burger {
+  & .burger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @media screen and (min-width: ${theme.breakpoints.md}) {
       display: none;
     }
