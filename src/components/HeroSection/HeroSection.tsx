@@ -5,12 +5,17 @@ import {
   StyledButton,
   StyledGhostButton,
 } from "@/components/ui/Button/Button.styled";
-import { StyledHeroContainer } from "./HeroSection.styled";
-import hero from "@/assets/hero.webp";
+import {
+  StyledHeroSection,
+  StyledHeroContainer,
+  StyledBadgeParticipants,
+} from "./HeroSection.styled";
+import hero from "@/assets/hero.png";
+import hero2x from "@/assets/hero@2x.png";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section id="hero">
+    <StyledHeroSection id="hero">
       <StyledHeroContainer>
         <div className="content">
           <div className="content-text">
@@ -58,9 +63,22 @@ export const HeroSection: React.FC = () => {
         </div>
 
         <div className="image-frame">
-          <img alt="hero" src={hero} className="hero-image" />
+          {/* <StyledEventParticipants>
+            <span className="participants">+22</span>{" "}
+            <span className="text">планують прийти</span>
+          </StyledEventParticipants> */}
+          <StyledBadgeParticipants>
+            <span className="participants">+22</span>
+            <span className="text">планують прийти</span>
+          </StyledBadgeParticipants>
+          <img
+            alt="hero"
+            src={hero} // базова картинка (fallback)
+            srcSet={`${hero} 1x, ${hero2x} 2x`}
+            className="hero-image"
+          />
         </div>
       </StyledHeroContainer>
-    </section>
+    </StyledHeroSection>
   );
 };
