@@ -1,75 +1,53 @@
-# React + TypeScript + Vite
+# **LocalHappens - Landing Page**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Рекламний лендінг для мобільного застосунку** **Local Happens**.
 
-Currently, two official plugins are available:
+## **Функції застосунку**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Перегляд подій поруч** із користувачем
+- **Зберігання в улюблені** подій та **доєднання** до них після **авторизації**
+- **Створення власних подій** та можливість ділитися ними з іншими користувачами
 
-## React Compiler
+## **Мета лендінгу**
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Лендінг слугує **презентацією функціоналу додатку** та для **залучення нових користувачів**.
 
-Note: This will impact Vite dev & build performances.
+## **Технології**
 
-## Expanding the ESLint configuration
+- React + Vite
+- Styled Components
+- Firebase (Auth, Firestore, Storage)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## **Функціонал лендінгу**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Інтерактивні кнопки з прокруткою до секцій, анамації
+- Презентація можливостей додатку
+- Call-to-action для завантаження мобільного застосунку
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# **LocalHappens - Landing Page**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Promotional landing page for the mobile app** **Local Happens**.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## **App Features**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Browse events nearby** the user
+- **Save events to favorites** and **join** them after **authentication**
+- **Create your own events** and share them with other users
+
+## **Landing Page Purpose**
+
+The landing page serves as a **showcase of the app’s functionality** and to **attract new users**.
+
+## **Technologies**
+
+- React + Vite
+- Styled Components
+- Firebase (Auth, Firestore, Storage)
+
+## **Landing Page Functionality**
+
+- Interactive buttons with scrolling to sections, animations
+- Showcase of app features
+- Call-to-action to download the mobile app

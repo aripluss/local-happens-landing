@@ -43,7 +43,9 @@ export const HeroSection: React.FC = () => {
               Завантажити додаток
             </StyledButton>
 
-            <StyledGhostButton>Переглянути можливості</StyledGhostButton>
+            <StyledGhostButton as="a" href="#how-it-works">
+              Переглянути можливості
+            </StyledGhostButton>
           </div>
 
           <div className="stats">
@@ -63,17 +65,13 @@ export const HeroSection: React.FC = () => {
         </div>
 
         <div className="image-frame">
-          {/* <StyledEventParticipants>
-            <span className="participants">+22</span>{" "}
-            <span className="text">планують прийти</span>
-          </StyledEventParticipants> */}
           <StyledBadgeParticipants>
             <span className="participants">+22</span>
             <span className="text">планують прийти</span>
           </StyledBadgeParticipants>
           <img
             alt="hero"
-            src={hero} // базова картинка (fallback)
+            src={hero}
             srcSet={`${hero} 1x, ${hero2x} 2x`}
             className="hero-image"
           />

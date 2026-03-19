@@ -8,7 +8,7 @@ import {
   StyledEventParticipants,
   StyledEventContentStyled,
 } from "./PreviewSection.styled";
-import hero from "@/assets/hero.webp";
+import hero from "@/assets/step5.webp";
 
 const events = [
   {

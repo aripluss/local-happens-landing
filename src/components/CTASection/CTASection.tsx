@@ -24,7 +24,7 @@ export const CTASection: React.FC = () => {
           <Parallax speed={10}>
             <div className="content">
               <div className="badge">
-                <LuSparkles size={6} />
+                <LuSparkles size={14} />
                 <span>Безкоштовно для всіх</span>
               </div>
 
@@ -59,12 +59,12 @@ export const CTASection: React.FC = () => {
               </div>
 
               <div className="feature">
-                <PiLightningBold />
+                <PiLightningBold size={14} />
                 <span>Швидка авторизація</span>
               </div>
 
               <div className="feature">
-                <BsHandThumbsUp />
+                <BsHandThumbsUp size={14} />
                 <span>50,000+ задоволених користувачів</span>
               </div>
             </div>
