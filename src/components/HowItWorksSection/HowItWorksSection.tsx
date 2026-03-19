@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
+
 import { StepCard } from "./StepCard";
 import { StyledButton } from "@/components/ui/Button/Button.styled";
 import {
@@ -6,34 +9,43 @@ import {
   StyledStepsGrid,
   StyledCta,
 } from "./HowItWorksSection.styled";
-import { FiDownload } from "react-icons/fi";
 
-import hero from "@/assets/hero.webp";
+import step1 from "@/assets/step1.webp";
+import step2 from "@/assets/step2.webp";
+import step3 from "@/assets/step3.webp";
+import step4 from "@/assets/step4.webp";
+import step5 from "@/assets/step5.webp";
 
 const steps = [
   {
     id: "01",
-    title: "Відкрийте мапу",
-    text: "Запустіть додаток та перегляньте інтерактивну карту подій навколо вас. Натисніть на будь-який маркер, щоб побачити деталі події та дізнатися, хто планує прийти. Фільтруйте за категоріями та датами.",
-    image: hero,
+    title: "Дізнайтесь про події",
+    text: "Запустіть додаток та дізнайтесь про заплановані заходи. Фільтруйте за містом, категоріями та датами.",
+    image: step1,
   },
   {
     id: "02",
-    title: "Плануйте свій час",
-    text: "Застосунок допомагає краще планувати свій розклад, від розваг до освіти і саморозвитку.",
-    image: hero,
+    title: "Відкрийте мапу",
+    text: "Перегляньте інтерактивну карту подій навколо вас. Натисніть на будь-який маркер, щоб побачити деталі події та дізнатися, хто планує прийти.",
+    image: step2,
   },
   {
     id: "03",
-    title: "Створіть подію",
-    text: "Зареєструйтеся та додайте свою подію за пару кліків. Будуйте активну спільноту навколо своїх інтересів.",
-    image: hero,
+    title: "Плануйте свій час",
+    text: "Застосунок допомагає краще планувати свій розклад, від розваг до освіти і саморозвитку.",
+    image: step3,
   },
   {
     id: "04",
+    title: "Створіть подію",
+    text: "Зареєструйтеся та додайте свою подію за пару кліків. Будуйте активну спільноту навколо своїх інтересів.",
+    image: step4,
+  },
+  {
+    id: "05",
     title: "Насолоджуйтесь",
     text: "Приєднуйтесь до подій, натискайте «Я йду!» та зустрічайте нових людей у вашій громаді, знайомтесь з однодумцями.",
-    image: hero,
+    image: step5,
   },
 ];
 
@@ -48,7 +60,19 @@ export const HowItWorksSection: React.FC = () => {
 
         <StyledStepsGrid>
           {steps.map((step, index) => (
-            <StepCard key={step.id} $reverse={index % 2 === 1} step={step} />
+            <motion.div
+              key={step.id}
+              initial={{ opacity: 0, y: 80, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              viewport={{ once: false, margin: "-100px" }}
+            >
+              <StepCard key={step.id} $reverse={index % 2 === 1} step={step} />
+            </motion.div>
           ))}
         </StyledStepsGrid>
 

@@ -29,7 +29,13 @@ export const StyledHowItWorksContainer = styled(StyledContainer)`
 export const StyledStepsGrid = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
+
+  position: relative;
+
+  .step-wrapper {
+    height: 300px;
+  }
 `;
 
 export const StyledCta = styled.div`

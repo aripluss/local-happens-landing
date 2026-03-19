@@ -16,7 +16,9 @@
   --border: #e8e6e3;
   --border-faint: rgba(229, 93, 62, 0.2);
   --hover-border: #aaa9a8;
-  --accent: #e55d3e;
+
+  --accent: #bd4426;
+  --hover-btn: #9b371e;
 
   --shadow: rgba(64, 79, 67, 0.05) 0 1px 2px 0;
   --shadow-hover:

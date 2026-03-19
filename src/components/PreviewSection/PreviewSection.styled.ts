@@ -119,6 +119,7 @@ export const StyledEventParticipants = styled.div`
   gap: 4px;
   padding: 6px 12px;
   background-color: var(--bg-white-faint);
+  border: 1px solid var(--border);
   border-radius: ${theme.radii.normal};
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

@@ -21,10 +21,18 @@ export const StyledFooter = styled.footer`
       font-size: ${theme.fontSizes.l};
     }
   }
+
+  & .motto {
+    display: none;
+    @media screen and (min-width: ${theme.breakpoints.md}) {
+      display: block;
+    }
+  }
 `;
 
 export const StyledFooterContainer = styled(StyledContainer)`
   display: flex;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
 `;

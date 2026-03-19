@@ -1,5 +1,6 @@
 import {
   StyledStepCard,
+  StyledStepImageFrame,
   StyledStepImage,
   StyledStepContentStyled,
 } from "./StepCard.styled";
@@ -18,7 +19,9 @@ interface StepCardProps {
 
 export const StepCard: React.FC<StepCardProps> = ({ step, $reverse }) => (
   <StyledStepCard $reverse={$reverse}>
-    <StyledStepImage src={step.image} alt={step.title} />
+    <StyledStepImageFrame>
+      <StyledStepImage src={step.image} alt={step.title} />
+    </StyledStepImageFrame>
 
     <StyledStepContentStyled>
       <span className="step-number">{step.id}</span>

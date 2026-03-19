@@ -26,11 +26,17 @@ export const StyledStepCard = styled.div<{ $reverse?: boolean }>`
   }
 `;
 
+export const StyledStepImageFrame = styled.div`
+  width: 100%;
+  max-height: 320px;
+`;
+
 export const StyledStepImage = styled.img`
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   border-radius: ${theme.radii.medium};
   object-fit: cover;
+  object-position: top left;
 `;
 
 export const StyledStepContentStyled = styled.div`

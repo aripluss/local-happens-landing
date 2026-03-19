@@ -22,7 +22,7 @@ export const StyledButton = styled.button`
 
   &:hover,
   &:focus-visible {
-    background-color: var(--text);
+    background-color: var(--hover-btn);
     box-shadow: var(--shadow-hover);
   }
 `;
