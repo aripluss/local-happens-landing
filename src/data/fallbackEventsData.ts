@@ -1,0 +1,88 @@
+import type { AppEvent } from "@/firebase/getEvents";
+import event1 from "@/assets/event1.webp";
+import event2 from "@/assets/event2.webp";
+import event3 from "@/assets/event3.webp";
+import event4 from "@/assets/event4.webp";
+import event5 from "@/assets/event5.webp";
+import event6 from "@/assets/event6.webp";
+
+export const fallbackEventsData: AppEvent[] = [
+  {
+    id: "1",
+    title: "Ранковий йога-марафон",
+    locationName: "Парк Шевченка, Київ",
+    imageUrl: event1,
+    category: "Спорт",
+    date: new Date().toISOString(),
+    description: "",
+    city: "Київ",
+    latitude: 0,
+    longitude: 0,
+    createdBy: "",
+  },
+  {
+    id: "2",
+    title: "Jazz вечір у Львові",
+    locationName: "Площа Ринок, 14, Львів",
+    imageUrl: event2,
+    category: "Музика",
+    date: new Date().toISOString(),
+    description: "",
+    city: "Львів",
+    latitude: 0,
+    longitude: 0,
+    createdBy: "",
+  },
+  {
+    id: "3",
+    title: "Street Food Festival",
+    locationName: "Аркадія, Одеса",
+    imageUrl: event3,
+    category: "Їжа",
+    date: new Date().toISOString(),
+    description: "",
+    city: "Одеса",
+    latitude: 0,
+    longitude: 0,
+    createdBy: "",
+  },
+  {
+    id: "4",
+    title: "Майстер-клас з кераміки",
+    locationName: "Вул. Коперника, 9, Львів",
+    imageUrl: event4,
+    category: "Освіта",
+    date: new Date().toISOString(),
+    description: "",
+    city: "Львів",
+    latitude: 0,
+    longitude: 0,
+    createdBy: "",
+  },
+  {
+    id: "5",
+    title: "Виставка сучасного мистецтва",
+    locationName: "Мистецький Арсенал, Київ",
+    imageUrl: event5,
+    category: "Мистецтво",
+    date: new Date().toISOString(),
+    description: "",
+    city: "Київ",
+    latitude: 0,
+    longitude: 0,
+    createdBy: "",
+  },
+  {
+    id: "6",
+    title: "Електронна музика: Sunrise Party",
+    locationName: "Пляж Ланжерон, Одеса",
+    imageUrl: event6,
+    category: "Музика",
+    date: new Date().toISOString(),
+    description: "",
+    city: "Одеса",
+    latitude: 0,
+    longitude: 0,
+    createdBy: "",
+  },
+];
