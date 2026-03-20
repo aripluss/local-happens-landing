@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   StyledPreviewSection,
   StyledPreviewContainer,
@@ -8,60 +9,49 @@ import {
   StyledEventParticipants,
   StyledEventContentStyled,
 } from "./PreviewSection.styled";
-import hero from "@/assets/step5.webp";
-
-const events = [
-  {
-    id: "1",
-    title: "Ранковий йога-марафон",
-    address: "Парк Шевченка, Київ",
-    image: hero,
-    category: "⚡ спорт",
-    participants: 7,
-  },
-  {
-    id: "2",
-    title: "Jazz вечір у Львові",
-    address: "Площа Ринок, 14, Львів",
-    image: hero,
-    category: "🎵 музика",
-    participants: 15,
-  },
-  {
-    id: "3",
-    title: "Street Food Festival",
-    address: "Аркадія, Одеса",
-    image: hero,
-    category: "🍽️ їжа",
-    participants: 22,
-  },
-  {
-    id: "4",
-    title: "Майстер-клас з кераміки",
-    address: "Вул. Коперника, 9, Львів",
-    image: hero,
-    category: "📚 освіта",
-    participants: 4,
-  },
-  {
-    id: "5",
-    title: "Виставка сучасного мистецтва",
-    address: "Мистецький Арсенал, Київ",
-    image: hero,
-    category: "🎨 мистецтво",
-    participants: 11,
-  },
-  {
-    id: "6",
-    title: "Електронна музика: Sunrise Party",
-    address: "Пляж Ланжерон, Одеса",
-    image: hero,
-    category: "🎵 музика",
-    participants: 17,
-  },
-];
+import { getEvents, type AppEvent } from "@/firebase/getEvents";
+import { fallbackEventsData } from "@/data/fallbackEventsData";
+import placeholderEventImg from "@/assets/placeholderEventImg.webp";
 
 export const PreviewSection: React.FC = () => {
+  const [events, setEvents] = useState<AppEvent[]>([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const data = await getEvents();
+        // максимум 6 подій
+        const topEvents = data.slice(0, 6);
+
+        // якщо отримано менше 6, то + запасні
+        if (topEvents.length < 6) {
+          const missingCount = 6 - topEvents.length;
+          const additionalEvents = fallbackEventsData.slice(0, missingCount);
+          setEvents([...topEvents, ...additionalEvents]);
+        } else {
+          setEvents(topEvents);
+        }
+      } catch (err) {
+        console.error("Помилка завантаження подій:", err);
+        setEvents(fallbackEventsData.slice(0, 6));
+      }
+    };
+
+    fetchEvents();
+  }, []);
+
+  const categoryMap: Record<string, string> = {
+    Музика: "🎵 Музика",
+    Спорт: "⚡ Спорт",
+    Їжа: "🍽️ Їжа",
+    Мистецтво: "🎨 Мистецтво",
+    Технології: "💻 Технології",
+    Освіта: "📚 Освіта",
+    Розваги: "🎭 Розваги",
+    Бізнес: "💼 Бізнес",
+    Інше: "✨ Інше",
+  };
+
   return (
     <StyledPreviewSection id="preview">
       <StyledPreviewContainer>
@@ -83,17 +73,27 @@ export const PreviewSection: React.FC = () => {
           {events.map((event) => (
             <StyledEventCard key={event.id}>
               <div className="image-wrapper">
-                <StyledEventImage src={event.image} alt={event.title} />
-                <StyledEventCategory>{event.category}</StyledEventCategory>
+                <StyledEventImage
+                  src={event.imageUrl ? event.imageUrl : placeholderEventImg}
+                  alt={event.title}
+                />
+                <div className="hover-overlay" />
+
+                <StyledEventCategory>
+                  {categoryMap[event.category] || event.category}
+                </StyledEventCategory>
                 <StyledEventParticipants>
-                  <span className="participants">+{event.participants}</span>{" "}
+                  <span className="participants">
+                    +{Math.floor(Math.random() * (17 - 4 + 1)) + 4}
+                  </span>
+                  {/* <span className="participants">+{event.participants}</span>{" "} */}
                   <span className="text">планують прийти</span>
                 </StyledEventParticipants>
               </div>
 
               <StyledEventContentStyled>
                 <h5 className="event-title">{event.title}</h5>
-                <p className="event-address">{event.address}</p>
+                <p className="event-address">{event.locationName}</p>
               </StyledEventContentStyled>
             </StyledEventCard>
           ))}
