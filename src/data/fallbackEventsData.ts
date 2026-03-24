@@ -19,6 +19,7 @@ export const fallbackEventsData: AppEvent[] = [
     latitude: 0,
     longitude: 0,
     createdBy: "",
+    participants: Math.floor(Math.random() * (17 - 4 + 1)) + 4,
   },
   {
     id: "2",
@@ -32,6 +33,7 @@ export const fallbackEventsData: AppEvent[] = [
     latitude: 0,
     longitude: 0,
     createdBy: "",
+    participants: Math.floor(Math.random() * (17 - 4 + 1)) + 4,
   },
   {
     id: "3",
@@ -45,6 +47,7 @@ export const fallbackEventsData: AppEvent[] = [
     latitude: 0,
     longitude: 0,
     createdBy: "",
+    participants: Math.floor(Math.random() * (17 - 4 + 1)) + 4,
   },
   {
     id: "4",
@@ -58,6 +61,7 @@ export const fallbackEventsData: AppEvent[] = [
     latitude: 0,
     longitude: 0,
     createdBy: "",
+    participants: Math.floor(Math.random() * (17 - 4 + 1)) + 4,
   },
   {
     id: "5",
@@ -71,6 +75,7 @@ export const fallbackEventsData: AppEvent[] = [
     latitude: 0,
     longitude: 0,
     createdBy: "",
+    participants: Math.floor(Math.random() * (17 - 4 + 1)) + 4,
   },
   {
     id: "6",
@@ -84,5 +89,6 @@ export const fallbackEventsData: AppEvent[] = [
     latitude: 0,
     longitude: 0,
     createdBy: "",
+    participants: Math.floor(Math.random() * (17 - 4 + 1)) + 4,
   },
 ];

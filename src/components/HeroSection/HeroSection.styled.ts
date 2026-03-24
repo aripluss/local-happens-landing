@@ -6,7 +6,6 @@ import { StyledEventParticipants } from "../PreviewSection/PreviewSection.styled
 export const StyledHeroSection = styled.section`
   background: linear-gradient(
     var(--bg) 0%,
-    #fbfaf9,
     var(--bg-secondary) 30%,
     var(--accent-bg) 50%,
     #79867d 80%
@@ -156,7 +155,8 @@ const glowPulse = keyframes`
 `;
 
 export const StyledBadgeParticipants = styled(StyledEventParticipants)`
-  background-color: var(--bg-secondary);
+  background-color: rgba(240, 242, 237, 0.5);
+  border: ${theme.borders.normal} rgba(240, 242, 237, 0.5);
   border-radius: ${theme.radii.medium};
   gap: 8px;
   padding: 8px 14px;
@@ -169,6 +169,7 @@ export const StyledBadgeParticipants = styled(StyledEventParticipants)`
   }
 
   .participants {
+    color: #222a25;
     font-size: ${theme.fontSizes.m};
     animation: ${glowPulse} 1s infinite;
   }

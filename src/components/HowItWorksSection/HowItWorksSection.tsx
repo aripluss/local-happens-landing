@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FiDownload } from "react-icons/fi";
 
 import { StepCard } from "./StepCard";
-import { StyledButton } from "@/components/ui/Button/Button.styled";
+import { AnalyticsButton } from "@/components/ui/AnalyticsButton/AnalyticsButton";
 import {
   StyledHowItWorksSection,
   StyledHowItWorksContainer,
@@ -86,10 +86,13 @@ export const HowItWorksSection: React.FC = () => {
             </p>
           </div>
 
-          <StyledButton>
+          <AnalyticsButton
+            eventName="download_click"
+            eventParams={{ label: "HowItWorksSection" }}
+          >
             <FiDownload size={16} />
             Спробувати
-          </StyledButton>
+          </AnalyticsButton>
         </StyledCta>
       </StyledHowItWorksContainer>
     </StyledHowItWorksSection>

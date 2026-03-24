@@ -49,10 +49,10 @@ export const StyledEventsGrid = styled.div`
 export const StyledEventCard = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--bg-bnw);
   border-radius: ${theme.radii.medium};
   box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+  border: ${theme.borders.normal} var(--border);
   transition: box-shadow 0.3s ease;
 
   &:hover {
@@ -136,7 +136,7 @@ export const StyledEventCategory = styled.span`
   padding: 4px 10px;
   border-radius: ${theme.radii.pill};
   background-color: var(--accent-bg);
-  color: var(--bg-white-faint);
+  color: var(--category-badge-text);
   border-color: var(--border-faint);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -151,7 +151,7 @@ export const StyledEventParticipants = styled.div`
   gap: 4px;
   padding: 6px 12px;
   background-color: var(--bg-white-faint);
-  border: 1px solid var(--border);
+  border: ${theme.borders.normal} var(--border);
   border-radius: ${theme.radii.normal};
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);

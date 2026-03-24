@@ -6,9 +6,6 @@ import {
   TestimonialsSection,
   CTASection,
 } from "@/components";
-// import {EventsSection} from "@/components/EventsSection";
-// import { TestimonialsSection } from "@/components";
-// import { CTASection } from "@/components";
 
 const Home: React.FunctionComponent = () => {
   return (

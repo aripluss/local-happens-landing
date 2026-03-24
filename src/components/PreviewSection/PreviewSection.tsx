@@ -9,31 +9,29 @@ import {
   StyledEventParticipants,
   StyledEventContentStyled,
 } from "./PreviewSection.styled";
-import { getEvents, type AppEvent } from "@/firebase/getEvents";
+import { getTopEventsPerCityUnique, type AppEvent } from "@/firebase/getEvents";
 import { fallbackEventsData } from "@/data/fallbackEventsData";
 import placeholderEventImg from "@/assets/placeholderEventImg.webp";
 
 export const PreviewSection: React.FC = () => {
   const [events, setEvents] = useState<AppEvent[]>([]);
 
+  const MAX_CARDS = 6;
+
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const data = await getEvents();
-        // максимум 6 подій
-        const topEvents = data.slice(0, 6);
-
-        // якщо отримано менше 6, то + запасні
-        if (topEvents.length < 6) {
-          const missingCount = 6 - topEvents.length;
-          const additionalEvents = fallbackEventsData.slice(0, missingCount);
-          setEvents([...topEvents, ...additionalEvents]);
-        } else {
-          setEvents(topEvents);
+        let topEvents = await getTopEventsPerCityUnique();
+        if (topEvents.length < MAX_CARDS) {
+          topEvents = [
+            ...topEvents,
+            ...fallbackEventsData.slice(0, MAX_CARDS - topEvents.length),
+          ];
         }
+        setEvents(topEvents.slice(0, MAX_CARDS));
       } catch (err) {
         console.error("Помилка завантаження подій:", err);
-        setEvents(fallbackEventsData.slice(0, 6));
+        setEvents(fallbackEventsData.slice(0, MAX_CARDS));
       }
     };
 
@@ -83,17 +81,16 @@ export const PreviewSection: React.FC = () => {
                   {categoryMap[event.category] || event.category}
                 </StyledEventCategory>
                 <StyledEventParticipants>
-                  <span className="participants">
-                    +{Math.floor(Math.random() * (17 - 4 + 1)) + 4}
-                  </span>
-                  {/* <span className="participants">+{event.participants}</span>{" "} */}
+                  <span className="participants">+{event.participants}</span>{" "}
                   <span className="text">планують прийти</span>
                 </StyledEventParticipants>
               </div>
 
               <StyledEventContentStyled>
                 <h5 className="event-title">{event.title}</h5>
-                <p className="event-address">{event.locationName}</p>
+                <p className="event-address">
+                  {event.locationName}, {event.city}
+                </p>
               </StyledEventContentStyled>
             </StyledEventCard>
           ))}

@@ -5,7 +5,7 @@ import { theme } from "@/styles/theme";
 export const StyledFooter = styled.footer`
   background-color: var(--bg);
   padding-block: 40px;
-  border-top: 1px solid var(--border);
+  border-top: ${theme.borders.normal} var(--border);
 
   & .logo {
     align-items: center;

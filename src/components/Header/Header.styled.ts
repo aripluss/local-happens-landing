@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   padding-block: 8px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: ${theme.borders.normal} var(--border);
 
   & .logo {
     align-items: center;
@@ -21,7 +21,6 @@ export const StyledHeader = styled.header`
   }
 
   & .logo-text {
-    display: none;
     @media screen and (min-width: ${theme.breakpoints.md}) {
       display: block;
       font-size: ${theme.fontSizes.l};
@@ -39,8 +38,6 @@ export const StyledHeader = styled.header`
   }
 
   & .nav {
-    display: none;
-
     @media screen and (min-width: ${theme.breakpoints.md}) {
       display: flex;
       justify-content: center;
@@ -57,10 +54,6 @@ export const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media screen and (min-width: ${theme.breakpoints.md}) {
-      display: none;
-    }
   }
 `;
 

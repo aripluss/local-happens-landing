@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "@/styles/theme";
+import { StyledContainer } from "../ui/Container/Container.styled";
 
 interface StyledBurgerMenuModalProps {
   $isOpen: boolean;
@@ -26,6 +27,13 @@ export const StyledBurgerMenuModal = styled.div<StyledBurgerMenuModalProps>`
   @media screen and (min-width: ${theme.breakpoints.md}) {
     display: none;
   }
+`;
+
+export const StyledBurgerMenuContainer = styled(StyledContainer)`
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
 `;
 
 export const StyledBurgerMenuUl = styled.ul`
