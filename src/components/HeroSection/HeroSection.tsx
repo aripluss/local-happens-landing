@@ -1,10 +1,7 @@
 import { FiDownload } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci";
 
-import {
-  StyledButton,
-  StyledGhostButton,
-} from "@/components/ui/Button/Button.styled";
+import { StyledGhostButton } from "@/components/ui/Button/Button.styled";
 import {
   StyledHeroSection,
   StyledHeroContainer,
@@ -12,6 +9,7 @@ import {
 } from "./HeroSection.styled";
 import hero from "@/assets/hero.png";
 import hero2x from "@/assets/hero@2x.png";
+import { AnalyticsButton } from "@/components/ui/AnalyticsButton/AnalyticsButton";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -38,10 +36,13 @@ export const HeroSection: React.FC = () => {
             </p>
           </div>
           <div className="hero-buttons">
-            <StyledButton>
+            <AnalyticsButton
+              eventName="download_click"
+              eventParams={{ label: "HeroSection" }}
+            >
               <FiDownload size={16} />
               Завантажити додаток
-            </StyledButton>
+            </AnalyticsButton>
 
             <StyledGhostButton as="a" href="#how-it-works">
               Переглянути можливості

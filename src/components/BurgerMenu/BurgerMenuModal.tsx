@@ -1,10 +1,12 @@
+import { useEffect } from "react";
+
 import {
+  StyledBurgerMenuContainer,
   StyledBurgerMenuModal,
   StyledBurgerMenuUl,
 } from "./BurgerMenuModal.styled";
-import { StyledContainer } from "../ui/Container/Container.styled";
 import { StyledLink } from "../App.styled";
-import { useEffect } from "react";
+import { ThemeToggle } from "@/components/ui/ToggleButton/ToggleButton";
 
 interface BurgerMenuModalProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -27,7 +29,9 @@ export const BurgerMenuModal: React.FC<BurgerMenuModalProps> = ({
 
   return (
     <StyledBurgerMenuModal $isOpen={isOpen}>
-      <StyledContainer>
+      <StyledBurgerMenuContainer>
+        <ThemeToggle />
+
         <nav>
           <StyledBurgerMenuUl>
             <li>
@@ -47,7 +51,7 @@ export const BurgerMenuModal: React.FC<BurgerMenuModalProps> = ({
             </li>
           </StyledBurgerMenuUl>
         </nav>
-      </StyledContainer>
+      </StyledBurgerMenuContainer>
     </StyledBurgerMenuModal>
   );
 };

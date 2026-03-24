@@ -16,29 +16,28 @@ export const StyledButton = styled.button`
   font-weight: ${theme.fontWeights.medium};
   border-radius: ${theme.radii.medium};
   box-shadow: var(--shadow);
+  border: ${theme.borders.normal} transparent;
   transition:
     background-color ${theme.transition},
+    color ${theme.transition},
     box-shadow ${theme.transition};
 
   &:hover,
   &:focus-visible {
     background-color: var(--hover-btn);
     box-shadow: var(--shadow-hover);
+    border: ${theme.borders.normal} var(--muted-bg);
   }
 `;
 
 export const StyledGhostButton = styled(StyledButton)`
-  background-color: white;
+  background-color: var(--bg-bnw);
   color: var(--text);
-  border: 1px solid var(--border);
-  transition:
-    border ${theme.transition},
-    color ${theme.transition},
-    box-shadow ${theme.transition};
+  border: ${theme.borders.normal} var(--border);
 
   &:hover,
   &:focus-visible {
-    background-color: white;
-    border: 1px solid var(--muted-bg);
+    background-color: var(--bg-bnw);
+    border: ${theme.borders.normal} var(--muted-bg);
   }
 `;

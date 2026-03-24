@@ -32,11 +32,11 @@ export const StyledTestimonialsContainer = styled(StyledContainer)`
     flex-direction: column;
     justify-content: space-between;
     gap: 16px;
-    background-color: white;
+    background-color: var(--bg-bnw);
     padding: 24px 16px;
     border-radius: ${theme.radii.normal};
     box-shadow: var(--shadow);
-    border: 1px solid var(--border);
+    border: ${theme.borders.normal} var(--border);
   }
 
   .review {

@@ -3,7 +3,7 @@ import { StyledContainer } from "@/components/ui/Container/Container.styled";
 import { theme } from "@/styles/theme";
 
 export const StyledHowItWorksSection = styled.section`
-  background: white;
+  background-color: var(--bg-bnw);
 `;
 
 export const StyledHowItWorksContainer = styled(StyledContainer)`

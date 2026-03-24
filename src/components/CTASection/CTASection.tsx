@@ -5,7 +5,7 @@ import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { PiLightningBold } from "react-icons/pi";
 import { BsHandThumbsUp } from "react-icons/bs";
 
-import { StyledButton } from "@/components/ui/Button/Button.styled";
+import { AnalyticsButton } from "@/components/ui/AnalyticsButton/AnalyticsButton";
 import {
   StyledCTASection,
   StyledCTAContainer,
@@ -41,14 +41,16 @@ export const CTASection: React.FC = () => {
           </Parallax>
 
           <Parallax speed={8}>
-            <StyledButton
+            <AnalyticsButton
+              eventName="download_click"
+              eventParams={{ label: "CTASection" }}
               style={{
                 alignSelf: "center",
               }}
             >
               <FiDownload size={14} />
               Завантажити додаток
-            </StyledButton>
+            </AnalyticsButton>
           </Parallax>
 
           <Parallax speed={6}>
