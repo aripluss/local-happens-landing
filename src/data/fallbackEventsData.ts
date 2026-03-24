@@ -10,7 +10,7 @@ export const fallbackEventsData: AppEvent[] = [
   {
     id: "1",
     title: "Ранковий йога-марафон",
-    locationName: "Парк Шевченка, Київ",
+    locationName: "Парк Шевченка",
     imageUrl: event1,
     category: "Спорт",
     date: new Date().toISOString(),
@@ -24,7 +24,7 @@ export const fallbackEventsData: AppEvent[] = [
   {
     id: "2",
     title: "Jazz вечір у Львові",
-    locationName: "Площа Ринок, 14, Львів",
+    locationName: "Площа Ринок, 14",
     imageUrl: event2,
     category: "Музика",
     date: new Date().toISOString(),
@@ -38,7 +38,7 @@ export const fallbackEventsData: AppEvent[] = [
   {
     id: "3",
     title: "Street Food Festival",
-    locationName: "Аркадія, Одеса",
+    locationName: "Аркадія",
     imageUrl: event3,
     category: "Їжа",
     date: new Date().toISOString(),
@@ -52,7 +52,7 @@ export const fallbackEventsData: AppEvent[] = [
   {
     id: "4",
     title: "Майстер-клас з кераміки",
-    locationName: "Вул. Коперника, 9, Львів",
+    locationName: "Вул. Коперника, 9",
     imageUrl: event4,
     category: "Освіта",
     date: new Date().toISOString(),
@@ -66,7 +66,7 @@ export const fallbackEventsData: AppEvent[] = [
   {
     id: "5",
     title: "Виставка сучасного мистецтва",
-    locationName: "Мистецький Арсенал, Київ",
+    locationName: "Мистецький Арсенал",
     imageUrl: event5,
     category: "Мистецтво",
     date: new Date().toISOString(),
@@ -80,7 +80,7 @@ export const fallbackEventsData: AppEvent[] = [
   {
     id: "6",
     title: "Електронна музика: Sunrise Party",
-    locationName: "Пляж Ланжерон, Одеса",
+    locationName: "Пляж Ланжерон",
     imageUrl: event6,
     category: "Музика",
     date: new Date().toISOString(),

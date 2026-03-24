@@ -60,7 +60,7 @@ export const StyledEventCard = styled.div`
 
     & .image-wrapper {
       img {
-        transform: scale(1.05);
+        transform: scale(1.05) translateZ(0);
       }
       & .hover-overlay {
         opacity: 0.5;
@@ -78,6 +78,9 @@ export const StyledEventCard = styled.div`
 
     img {
       transition: transform 0.6s ease;
+      will-change: transform;
+      border-top-left-radius: ${theme.radii.medium};
+      border-top-right-radius: ${theme.radii.medium};
     }
 
     .hover-overlay {

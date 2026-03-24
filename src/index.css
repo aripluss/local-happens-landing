@@ -63,6 +63,10 @@ h2 {
   font-size: 36px;
 }
 
+h2.logo-text {
+  font-family: var(--font-logo);
+}
+
 h3 {
   font-size: 30px;
 }

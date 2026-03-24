@@ -12,6 +12,7 @@ interface AnalyticsButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElem
   eventName?: string; // назва події в аналітиці
   eventParams?: Record<string, string | number | boolean>;
   variant?: "default" | "ghost";
+  href?: string;
 }
 
 export const AnalyticsButton: React.FC<AnalyticsButtonProps> = ({
@@ -19,11 +20,16 @@ export const AnalyticsButton: React.FC<AnalyticsButtonProps> = ({
   eventName = "button_click",
   eventParams = {},
   variant = "default",
+  href,
   ...props
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     // лог події в Firebase Analytics
     logEvent(analytics, eventName, eventParams);
+
+    if (href) {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }
 
     if (props.onClick) props.onClick(e);
   };

@@ -1,40 +1,7 @@
 import { GiRoundStar } from "react-icons/gi";
 
 import { StyledTestimonialsContainer } from "./TestimonialsSection.styled";
-
-interface TestimonialItem {
-  rating: number;
-  text: string;
-  author: string;
-  city: string;
-}
-
-const testimonialData: TestimonialItem[] = [
-  {
-    rating: 5,
-    text: "З LocalHappens я залучила 50 людей на свій майстер-клас з кераміки. Раніше це було неможливо - тепер просто та швидко!",
-    author: "Ірина К.",
-    city: "Харків",
-  },
-  {
-    rating: 5,
-    text: "Організував кілька воркшопів через додаток - зібралося більше людей, ніж я очікував. Дуже зручний інструмент для локальних подій.",
-    author: "Денис Г.",
-    city: "Львів",
-  },
-  {
-    rating: 5,
-    text: "Завдяки LocalHappens я знайшла групу для ранкових пробіжок у парку біля дому. Тепер кожен ранок починається з бігу та нових знайомств!",
-    author: "Анна С.",
-    city: "Київ",
-  },
-  {
-    rating: 5,
-    text: "Нарешті додаток, де можна побачити ВСЕ, що відбувається навколо. Від концертів до благодійних акцій - все в одному місці.",
-    author: "Артем П.",
-    city: "Одеса",
-  },
-];
+import { testimonialsData } from "@/data/testimonialsData";
 
 export const TestimonialsSection: React.FC = () => {
   return (
@@ -46,7 +13,7 @@ export const TestimonialsSection: React.FC = () => {
         </h2>
 
         <div className="cards">
-          {testimonialData.map((item, index) => (
+          {testimonialsData.map((item, index) => (
             <div key={index} className="testimonial">
               <div className="review">
                 <div className="rating">

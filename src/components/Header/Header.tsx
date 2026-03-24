@@ -50,6 +50,7 @@ export const Header: React.FC = () => {
                 paddingBlock: "8px",
                 fontSize: "14px",
               }}
+              href="https://drive.google.com/drive/folders/1cTtOfhMLAYLsUCO-FkdZcXgtiaZbUKHz?usp=sharing"
             >
               <FiDownload size={14} />
               Завантажити

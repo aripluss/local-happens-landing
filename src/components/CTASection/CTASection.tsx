@@ -47,6 +47,7 @@ export const CTASection: React.FC = () => {
               style={{
                 alignSelf: "center",
               }}
+              href="https://drive.google.com/drive/folders/1cTtOfhMLAYLsUCO-FkdZcXgtiaZbUKHz?usp=sharing"
             >
               <FiDownload size={14} />
               Завантажити додаток

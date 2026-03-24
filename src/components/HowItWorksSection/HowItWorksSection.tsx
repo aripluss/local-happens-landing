@@ -9,45 +9,7 @@ import {
   StyledStepsGrid,
   StyledCta,
 } from "./HowItWorksSection.styled";
-
-import step1 from "@/assets/step1.webp";
-import step2 from "@/assets/step2.webp";
-import step3 from "@/assets/step3.webp";
-import step4 from "@/assets/step4.webp";
-import step5 from "@/assets/step5.webp";
-
-const steps = [
-  {
-    id: "01",
-    title: "Дізнайтесь про події",
-    text: "Запустіть додаток та дізнайтесь про заплановані заходи. Фільтруйте за містом, категоріями та датами.",
-    image: step1,
-  },
-  {
-    id: "02",
-    title: "Відкрийте мапу",
-    text: "Перегляньте інтерактивну карту подій навколо вас. Натисніть на будь-який маркер, щоб побачити деталі події та дізнатися, хто планує прийти.",
-    image: step2,
-  },
-  {
-    id: "03",
-    title: "Плануйте свій час",
-    text: "Застосунок допомагає краще планувати свій розклад, від розваг до освіти і саморозвитку.",
-    image: step3,
-  },
-  {
-    id: "04",
-    title: "Створіть подію",
-    text: "Зареєструйтеся та додайте свою подію за пару кліків. Будуйте активну спільноту навколо своїх інтересів.",
-    image: step4,
-  },
-  {
-    id: "05",
-    title: "Насолоджуйтесь",
-    text: "Приєднуйтесь до подій, натискайте «Я йду!» та зустрічайте нових людей у вашій громаді, знайомтесь з однодумцями.",
-    image: step5,
-  },
-];
+import { howItWorksStepsData as steps } from "@/data/howItWorksStepsData";
 
 export const HowItWorksSection: React.FC = () => {
   return (
@@ -89,6 +51,7 @@ export const HowItWorksSection: React.FC = () => {
           <AnalyticsButton
             eventName="download_click"
             eventParams={{ label: "HowItWorksSection" }}
+            href="https://drive.google.com/drive/folders/1cTtOfhMLAYLsUCO-FkdZcXgtiaZbUKHz?usp=sharing"
           >
             <FiDownload size={16} />
             Спробувати

@@ -39,6 +39,7 @@ export const HeroSection: React.FC = () => {
             <AnalyticsButton
               eventName="download_click"
               eventParams={{ label: "HeroSection" }}
+              href="https://drive.google.com/drive/folders/1cTtOfhMLAYLsUCO-FkdZcXgtiaZbUKHz?usp=sharing"
             >
               <FiDownload size={16} />
               Завантажити додаток
